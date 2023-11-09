@@ -23,7 +23,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
-    min-width: 320px; /* Ensures legibility on smaller screens */
+    min-width: 250px; /* Ensures legibility on smaller screens */
     outline: 1vw solid #fff; /* Outline to replace the separate element */
 }
 
@@ -46,8 +46,26 @@ body {
     text-align: left;
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 2vw;
+    }
+    .dimensionLabel {
+        font-size: 3vw;
+    }
+    .dimensionValue {
+        font-size: 10vw;
+    }
+    #windowSize {
+        padding: 1vw;
+        width: 90%;
+        outline: 0.3vw solid #fff; /* Adjust outline thickness for smaller screens */
+    }
+}
+
 /* Media query for larger screens */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
     body {
         font-size: 1vw;
     }
